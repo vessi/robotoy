@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
 require 'bundler/setup'
 require 'turnip'
+require 'robotoy'
 
 Dir.glob('spec/steps/**/*.rb') { |f| load f, true }
 
