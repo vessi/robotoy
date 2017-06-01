@@ -10,7 +10,7 @@ class Robotoy
     attr_reader :position
 
     def perform_command(command)
-      return unless position || command =~ /PLACE/i
+      return unless position || command =~ /place (\d),(\d),(north|south|west|east)/i
       parse_command(command)
     end
 
