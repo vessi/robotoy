@@ -25,6 +25,8 @@ class Robotoy
       def get_commands(argf, filename)
         input = filename.nil? ? argf.read : File.read(filename)
         @commands = input.split("\n")
+      rescue Errno::ENOENT
+        @commands = []
       end
     end
   end
