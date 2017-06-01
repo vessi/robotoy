@@ -2,9 +2,11 @@
 
 source 'https://rubygems.org'
 
+group :development do
+  gem 'pry'
+end
+
 group :development, :test do
-  gem 'reek'
   gem 'rspec'
-  gem 'rubocop'
   gem 'turnip'
 end
